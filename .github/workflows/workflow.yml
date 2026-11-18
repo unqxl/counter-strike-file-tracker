@@ -42,7 +42,7 @@ jobs:
         - name: Trigger image-tracker update
           if: steps.auto-commit.outputs.changes_detected == 'true'
           run: |
-            gh api repos/ByMykel/counter-strike-image-tracker/dispatches \
+            gh api repos/unqxl/counter-strike-image-tracker/dispatches \
               -f event_type=game-files-updated
           env:
             GH_TOKEN: ${{ secrets.PAT_TOKEN }}
